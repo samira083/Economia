@@ -44,23 +44,70 @@
 <!-- ÍCONES PRINCIPAIS -->
 <div class="icon-imagens">
     <img src="trabalho.png" class="trabalho-img" onclick="abrirDetalhes()" alt="Ícone de trabalho">
-    <img src="fixos.png" class="fixos-img" alt="Ícone de gastos fixos">
-    <img src="lazer.png" class="lazer-img" alt="Ícone de lazer">
-    <img src="economia.png" class="economia-img" alt="Ícone de economia">
+    <img src="fixos.png" class="fixos-img" onclick="abrirDetalhesFixos()" alt="Ícone de gastos fixos">
+    <img src="lazer.png" class="lazer-img" onclick="abrirDetalhesLazer()" alt="Ícone de lazer">
+    <img src="economia.png" class="economia-img" onclick="abrirDetalhesEconomia()" alt="Ícone de economia">
 </div>
 
-<!-- MODAL (janela) -->
-<div id="overlay-projeto" class="overlay">
-    <div class="modal">
-        <h2>Trabalho</h2>
-        <p>
-            Aqui você poderá organizar seus gastos relacionados ao trabalho,
-            definir metas e controlar porcentagens.
-        </p>
-        <button onclick="fecharDetalhes()">Fechar</button>
+<!-- MODAL TRABALHO -->
+<div id="overlay-trabalho" class="overlay-projeto">
+    <div class="modal-projeto">
+        <span class="fechar" onclick="fecharDetalhes()">✖</span>
+        <div class="conteudo-projeto">
+            <div class="texto-projeto">
+                <h2>PORCENTAGEM DE GASTOS - TRABALHO</h2>
+                <p>É indicado investir até <strong>20%</strong> do seu salário em desenvolvimento profissional.</p>
+                <input type="number" placeholder="10%" class="input-porcentagem">
+                <button onclick="confirmar()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
+            </div>
+        </div>
     </div>
 </div>
 
+<!-- MODAL FIXOS -->
+<div id="overlay-fixos" class="overlay-projeto">
+    <div class="modal-projeto">
+        <span class="fechar" onclick="fecharDetalhesFixos()">✖</span>
+        <div class="conteudo-projeto">
+            <div class="texto-projeto">
+                <h2>PORCENTAGEM DE GASTOS - FIXOS</h2>
+                <p>É indicado investir até <strong>50%</strong> do seu salário em gastos fixos.</p>
+                <input type="number" placeholder="50%" class="input-porcentagem">
+                <button onclick="confirmar()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL LAZER -->
+<div id="overlay-lazer" class="overlay-projeto">
+    <div class="modal-projeto">
+        <span class="fechar" onclick="fecharDetalhesLazer()">✖</span>
+        <div class="conteudo-projeto">
+            <div class="texto-projeto">
+                <h2>PORCENTAGEM DE GASTOS - LAZER</h2>
+                <p>É indicado investir até <strong>10%</strong> do seu salário em lazer e diversão.</p>
+                <input type="number" placeholder="10%" class="input-porcentagem">
+                <button onclick="confirmar()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL ECONOMIA -->
+<div id="overlay-economia" class="overlay-projeto">
+    <div class="modal-projeto">
+        <span class="fechar" onclick="fecharDetalhesEconomia()">✖</span>
+        <div class="conteudo-projeto">
+            <div class="texto-projeto">
+                <h2>PORCENTAGEM DE GASTOS - ECONOMIA</h2>
+                <p>É indicado investir até <strong>20%</strong> do seu salário em economia e investimentos.</p>
+                <input type="number" placeholder="20%" class="input-porcentagem">
+                <button onclick="confirmar()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="script.js"></script>
 
 </body>

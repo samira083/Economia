@@ -10,12 +10,7 @@ input.addEventListener("input", () => {
   if (valor.length === 0) {
     input.value = "";
     return;
-  }//
-
-  // garante no mínimo 3 dígitos (ex: 000)
- // while (valor.length < 3) {
-  //  valor = "0" + valor;
-  //}
+  }
 
   // separa reais e centavos
   const reais = valor.slice(0, -2);
@@ -32,15 +27,48 @@ const botao = document.querySelector(".botao-salario");
 botao.addEventListener("click", () => {
   const valor = input.value;
   console.log(`Salário confirmado: R$ ${valor}`);
-  // Aqui você pode adicionar mais lógica
 });
 
+// FUNÇÕES DOS MODAIS
 
+// Trabalho
+function abrirDetalhes() {
+  document.getElementById("overlay-trabalho").style.display = "flex";
+}
 
-            // Abre o modal de detalhes do projeto
-function abrirDetalhes(){
-    const overlay = document.getElementById('overlay-projeto');
-        if(overlay){
-        overlay.style.display = 'flex';
-        }
-    }
+function fecharDetalhes() {
+  document.getElementById("overlay-trabalho").style.display = "none";
+}
+
+// Fixos
+function abrirDetalhesFixos() {
+  document.getElementById("overlay-fixos").style.display = "flex";
+}
+
+function fecharDetalhesFixos() {
+  document.getElementById("overlay-fixos").style.display = "none";
+}
+
+// Lazer
+function abrirDetalhesLazer() {
+  document.getElementById("overlay-lazer").style.display = "flex";
+}
+
+function fecharDetalhesLazer() {
+  document.getElementById("overlay-lazer").style.display = "none";
+}
+
+// Economia
+function abrirDetalhesEconomia() {
+  document.getElementById("overlay-economia").style.display = "flex";
+}
+
+function fecharDetalhesEconomia() {
+  document.getElementById("overlay-economia").style.display = "none";
+}
+
+// Confirmar porcentagem
+function confirmar() {
+  const valor = document.getElementById("porcentagem-salario").value;
+  console.log(`Porcentagem confirmada: ${valor}%`);
+}
