@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <title>GranaPlan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <span class="logo-orange">Grana</span>Plan
+  </div>
+
+  <nav class="nav">
+    <a href="#">Dashboard</a>
+    <a href="#">Relatórios</a>
+    <a href="#">Dicas</a>
+    <a href="#">Meu Perfil</a>
+  </nav>
+</header>
+
+<h1 class="frase-titulo">Olá, organize o seu salário!</h1>
+<h3 class="frase-sub-titulo">Informe o seu salário mensal:</h3>
+
+<section class="salario">
+    <div class="campo-salario">
+        <span class="moeda">R$</span>
+        <input 
+            type="text" 
+            placeholder="Digite seu salário" 
+            class="input-salario"
+            inputmode="decimal">
+        <button class="botao-salario">Confirmar</button>
+    </div>
+</section>
+
+<!-- ÍCONES PRINCIPAIS -->
+<div class="icon-imagens">
+    <img src="trabalho.png" class="trabalho-img" onclick="abrirDetalhes()" alt="Ícone de trabalho">
+    <img src="fixos.png" class="fixos-img" alt="Ícone de gastos fixos">
+    <img src="lazer.png" class="lazer-img" alt="Ícone de lazer">
+    <img src="economia.png" class="economia-img" alt="Ícone de economia">
+</div>
+
+<!-- MODAL (janela) -->
+<div id="overlay-projeto" class="overlay">
+    <div class="modal">
+        <h2>Trabalho</h2>
+        <p>
+            Aqui você poderá organizar seus gastos relacionados ao trabalho,
+            definir metas e controlar porcentagens.
+        </p>
+        <button onclick="fecharDetalhes()">Fechar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
