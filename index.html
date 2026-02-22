@@ -43,10 +43,22 @@
 
 <!-- ÍCONES PRINCIPAIS -->
 <div class="icon-imagens">
-    <img src="trabalho.png" class="trabalho-img" onclick="abrirDetalhes()" alt="Ícone de trabalho">
-    <img src="fixos.png" class="fixos-img" onclick="abrirDetalhesFixos()" alt="Ícone de gastos fixos">
-    <img src="lazer.png" class="lazer-img" onclick="abrirDetalhesLazer()" alt="Ícone de lazer">
-    <img src="economia.png" class="economia-img" onclick="abrirDetalhesEconomia()" alt="Ícone de economia">
+    <div class="item-imagem">
+        <img src="trabalho.png" class="trabalho-img" onclick="abrirDetalhes()" alt="Ícone de trabalho">
+        <p class="valor-gasto" id="valor-trabalho">R$ 0,00</p>
+    </div>
+    <div class="item-imagem">
+        <img src="fixos.png" class="fixos-img" onclick="abrirDetalhesFixos()" alt="Ícone de gastos fixos">
+        <p class="valor-gasto" id="valor-fixos">R$ 0,00</p>
+    </div>
+    <div class="item-imagem">
+        <img src="lazer.png" class="lazer-img" onclick="abrirDetalhesLazer()" alt="Ícone de lazer">
+        <p class="valor-gasto" id="valor-lazer">R$ 0,00</p>
+    </div>
+    <div class="item-imagem">
+        <img src="economia.png" class="economia-img" onclick="abrirDetalhesEconomia()" alt="Ícone de economia">
+        <p class="valor-gasto" id="valor-economia">R$ 0,00</p>
+    </div>
 </div>
 
 <!-- MODAL TRABALHO -->
@@ -57,8 +69,8 @@
             <div class="texto-projeto">
                 <h2>PORCENTAGEM DE GASTOS - TRABALHO</h2>
                 <p>É indicado investir até <strong>20%</strong> do seu salário em desenvolvimento profissional.</p>
-                <input type="number" placeholder="10%" class="input-porcentagem">
-                <button onclick="confirmar()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
+                <input type="number" id="porcentagem-trabalho" placeholder="10%" class="input-porcentagem">
+                <button onclick="confirmarTrabalho()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
             </div>
         </div>
     </div>
@@ -72,8 +84,8 @@
             <div class="texto-projeto">
                 <h2>PORCENTAGEM DE GASTOS - FIXOS</h2>
                 <p>É indicado investir até <strong>50%</strong> do seu salário em gastos fixos.</p>
-                <input type="number" placeholder="50%" class="input-porcentagem">
-                <button onclick="confirmar()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
+                <input type="number" id="porcentagem-fixos" placeholder="50%" class="input-porcentagem">
+                <button onclick="confirmarFixos()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
             </div>
         </div>
     </div>
@@ -87,8 +99,8 @@
             <div class="texto-projeto">
                 <h2>PORCENTAGEM DE GASTOS - LAZER</h2>
                 <p>É indicado investir até <strong>10%</strong> do seu salário em lazer e diversão.</p>
-                <input type="number" placeholder="10%" class="input-porcentagem">
-                <button onclick="confirmar()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
+                <input type="number" id="porcentagem-lazer" placeholder="10%" class="input-porcentagem">
+                <button onclick="confirmarLazer()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
             </div>
         </div>
     </div>
@@ -102,8 +114,8 @@
             <div class="texto-projeto">
                 <h2>PORCENTAGEM DE GASTOS - ECONOMIA</h2>
                 <p>É indicado investir até <strong>20%</strong> do seu salário em economia e investimentos.</p>
-                <input type="number" placeholder="20%" class="input-porcentagem">
-                <button onclick="confirmar()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
+                <input type="number" id="porcentagem-economia" placeholder="20%" class="input-porcentagem">
+                <button onclick="confirmarEconomia()" class="botao-confirmar-trabalho">CONFIRMAR PORCENTAGEM</button>
             </div>
         </div>
     </div>
